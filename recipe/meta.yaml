@@ -1,6 +1,6 @@
 
 {% set name = "multineat" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 {% set sha256 = "d58439c548433adcda98e695be53e526ba940a4b9c44fb9a05d92cd495cdd47f" %}
 
 package:
@@ -20,13 +20,13 @@ requirements:
     - setuptools
     - cmake
     - psutil
-    - boost>=1.65,<1.67
-    - boost-cpp>=1.65,<1.67
+    - boost>=1.67
+    - boost-cpp>=1.67
   run:
     - python
     - psutil
-    - boost>=1.65,<1.67
-    - boost-cpp>=1.65,<1.67
+    - boost>=1.67
+    - boost-cpp>=1.67
     - numpy>=1.11.3
     - matplotlib>=2.2
     - opencv>=3.3

@@ -5,7 +5,8 @@ set -e
 
 SOURCE_CODE_DIR=${SRC_DIR:-$(dirname $0)/..}
 
-TESTS="${SOURCE_CODE_DIR}/examples/TestTraits.py ${SOURCE_CODE_DIR}/examples/TestNEAT_xor.py ${SOURCE_CODE_DIR}/examples/TestHyperNEAT_xor.py"
+# NoveltySearch.py - requires pygame and runs forever
+TESTS="TestTraits.py TestNEAT_xor.py TestHyperNEAT_xor.py"
 
-echo $TESTS | xargs -n 1 -P 4 python
+echo $TESTS | xargs -t -n 1 -P 4 -I % bash -c "python -u ${SOURCE_CODE_DIR}/examples/% | sed 's/^/[%] /'"
 
