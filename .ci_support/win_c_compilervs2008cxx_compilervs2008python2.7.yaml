@@ -3,15 +3,13 @@ boost:
 boost_cpp:
 - 1.68.0
 c_compiler:
-- gcc
+- vs2008
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
-docker_image:
-- condaforge/linux-anvil-comp7
+- vs2008
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -22,3 +20,7 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '2.7'
+zip_keys:
+- - python
+  - c_compiler
+  - cxx_compiler
