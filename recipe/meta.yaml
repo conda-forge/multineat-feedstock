@@ -16,20 +16,24 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+  host:
     - python
     - setuptools
     - cmake
     - psutil
-    - boost>=1.67
-    - boost-cpp>=1.67
+    - boost
+    - boost-cpp
   run:
     - python
     - psutil
-    - boost>=1.67
-    - boost-cpp>=1.67
-    - numpy>=1.11.3
-    - matplotlib>=2.2
-    - opencv>=3.3
+    - boost
+    - boost-cpp
+    - numpy >=1.11.3
+    - matplotlib >=2.2
+    - opencv >=3.3
     - psutil
     - ipyparallel
     - progressbar  # [py<=2.7]
